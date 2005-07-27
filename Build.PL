@@ -5,7 +5,7 @@ use Module::Build;
 my $builder = Module::Build->new(
     module_name         => 'Template::Plugin::Pageset',
     license             => 'perl',
-    dist_author         => 'Chunzi <me@chunzi.org>',
+    dist_author         => 'Chunzi <chunzi@chunzi.org>',
     dist_version_from   => 'lib/Template/Plugin/Pageset.pm',
     requires => { 'Test::More' => 0,
                   'Test::Exception' => 0,

@@ -6,14 +6,14 @@ use Data::Page::Pageset;
 use Template::Plugin;
 use base qw(Template::Plugin);
 
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.1.1.1 $ =~ /: (\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.02 $ =~ /: (\d+)\.(\d+)/;
 
 sub new {
 	my ($proto, $context, $page, $param ) = @_;
 	my $class = ref($proto) || $proto;
 
 	($page, $param) = ($context, $page, $param )
-		unless ref($context) eq 'Template::Context';
+		unless ref($context) =~ /^Template::/;
 
 	my $pageset = Data::Page::Pageset->new( $page, $param );	
 	return $pageset;
